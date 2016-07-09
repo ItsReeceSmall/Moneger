@@ -19,7 +19,7 @@
               Dom7('head').append(
                   '<link rel="stylesheet" href="css/framework7.material.min.css">' +
                   '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
-                  '<link rel="stylesheet" href="css/my-app.material.css">'
+                  '<link rel="stylesheet" href="css/my-app.css">'
               );
               document.getElementById("btAbout").style.color = "ffffff";
               document.getElementById("bthelp").style.color = "ffffff";
@@ -102,9 +102,19 @@
                 </div>
             </div>
           </div>
+        </div>      
+        <!-- Toolbar settings -->
+        <div id="bottom-toolbar" class="toolbar">
+            <div class="toolbar-inner">
+                <a id="btAbout" href="#" data-popup=".popup-about" class="open-popup">About</a>
+                <a id="bthelp" href="#" data-popover=".popover-help" class="open-popover">Help?</a>
+                <a id="btcurrency" href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
+                <a id="btae" href="#" data-popover=".popover-addexpense" class="open-popover">Add Expense</a>
+            </div>
         </div>
-        
-        <!-- Popover for currency choice -->
+      </div>
+    </div>
+    <!-- Popover for currency choice -->
         <div class="popover popover-currency">
             <div class="popover-angle"></div>
             <div class="popover-inner">
@@ -139,7 +149,7 @@
         </div>
           
         <!-- Popup for Expense form -->
-        <div class="popup popup-addexpense">
+        <div class="popover popover-addexpense">
             <div class="content-block">
                 <div class="content-block-title">Expense Name</div>
                 <div class="item-input">
@@ -161,6 +171,12 @@
                     <h3>A simple money management application</h3>
                     <p>By Reece Small</p>
                     <p>v0.0.1</p>
+                    <p class="buttons-row">
+                      <a href="#" class="button color-red">Visit YouTube</a>
+                      <a href="#" class="button color-indigo">Follow me on Instagram @ItsReeceSmall</a>
+                      <a href="#" class="button color-cyan">Follow me on Twitter @ItsReeceSmall</a>
+                      <a href="#" data-popup=".popup-about" class="button color-green">Return to App</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -172,17 +188,5 @@
                 width: auto;
             }
         </style>
-        
-        <!-- Toolbar settings -->
-        <div id="bottom-toolbar" class="toolbar">
-            <div class="toolbar-inner">
-                <a id="btAbout" href="#" data-popup=".popup-about" class="open-popup">About</a>
-                <a id="bthelp" href="#" data-popover=".popover-help" class="open-popover">Help?</a>
-                <a id="btcurrency" href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
-                <a id="btae" href="#" data-popup=".popup-addexpense" class="open-popup">Add Expense</a>
-            </div>
-        </div>
-      </div>
-    </div>
   </body>
 </html> 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Monager</title>
+    <title>Moneger</title>
     <!-- We will include related CSS styles using JavaScript -->
   </head>
     <script src="js/framework7.min.js"></script>
@@ -21,7 +21,11 @@
                   '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
                   '<link rel="stylesheet" href="css/my-app.material.css">'
               );
-              document.getElementById("bottom-toolbar").style.color = "ffffff";
+              document.getElementById("btAbout").style.color = "ffffff";
+              document.getElementById("bthelp").style.color = "ffffff";
+              document.getElementById("btcurrency").style.color = "ffffff";
+              document.getElementById("btae").style.color = "ffffff";
+
           }
           else {
               Dom7('head').append(
@@ -138,7 +142,13 @@
         <div class="popup popup-addexpense">
             <div class="content-block">
                 <div class="content-block-title">Expense Name</div>
+                <div class="item-input">
+                  <input type="text" placeholder="Enter Expense Name">
+                </div>  
                 <div class="content-block-title">Expense Cost</div>
+                <div class="item-input">
+                  <input type="number" pattern="\d*" placeholder="Enter Expense Cost">
+                </div> 
             </div>
         </div>
         
@@ -166,10 +176,10 @@
         <!-- Toolbar settings -->
         <div id="bottom-toolbar" class="toolbar">
             <div class="toolbar-inner">
-                <a href="#" data-popup=".popup-about" class="open-popup">About</a>
-                <a href="#" data-popover=".popover-help" class="open-popover">Help?</a>
-                <a href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
-                <a href="#" data-popup=".popup-addexpense" class="open-popup">Add Expense</a>
+                <a id="btAbout" href="#" data-popup=".popup-about" class="open-popup">About</a>
+                <a id="bthelp" href="#" data-popover=".popover-help" class="open-popover">Help?</a>
+                <a id="btcurrency" href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
+                <a id="btae" href="#" data-popup=".popup-addexpense" class="open-popup">Add Expense</a>
             </div>
         </div>
       </div>
