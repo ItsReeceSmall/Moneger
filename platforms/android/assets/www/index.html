@@ -49,15 +49,33 @@
         <div class="pages">
           <div data-page="index" class="page">
             <div class="page-content">
-                <div class="content-block-title"></div>
                 <div class="content-block">
                     <div class="row">
                         <div class="col-50">
-                            <div class="content-block-title">Starting Balance</div>
+                            <div style="text-align: center" class="content-block-title">Starting Balance</div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div class="list-block">
+                                        <ul>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-input">
+                                                        <input type="number" pattern="\d*" name="startVal">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="col-50">
-                            <div class="content-block-title">Remaining Balance</div>
-                            
+                            <div style="text-align: center" class="content-block-title">Remaining Balance</div>
+                            <div class="row">
+                                <div class="col-auto">
+                                    <h1 style="text-align: center; padding-top: 20px" name="finalVal" id="finalVal">£1000</h1>
+                                </div>
+                            </div>
                         </div>
                     </div>                  
                 </div>
@@ -66,8 +84,9 @@
                     <ul>
                         <li class="swipeout">
                             <div class="swipeout-content item-content">
-                                <div class="item-media">Expense</div>
-                                <div class="item-inner">£450</div>
+                                <div id="expense" class="item-media">Expense</div>
+                                <div style="width: 10px" id="currency" class="item-inner">£</div>
+                                <div id="expenseVal" class="item-inner">450</div>
                             </div>
                             <div class="swipeout-actions-right">
                                 <!-- Add this button and item will be deleted automatically -->
@@ -76,24 +95,40 @@
                         </li>  
                     </ul>
                 </div>
-                <div class="popup popup-about">
-                    <div class="content-block">
-                        <p>About</p>
-                        <p><a href="#" class="close-popup">Close popup</a></p>
-                        <p>Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...</p>
-                    </div>
-                </div>
             </div>
           </div>
         </div>
-          
+        
+        <!-- Popover for currency choice -->
+        <div class="popover popover-links">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+                <div class="list-block">
+                    <ul>
+                        <li><a href="#" class="list-button item-link">£</a></li>
+                        <li><a href="#" class="list-button item-link">$</a></li>
+                        <li><a href="#" class="list-button item-link">¥</a></li>
+                        <li><a href="#" class="list-button item-link">€</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+          .popover {
+            width: 100px;
+            }
+        </style>
+    
+        <!-- Toolbar settings -->
         <div class="toolbar">
             <div class="toolbar-inner">
-                <a href="#" data-popup=".popup-about" class="open-popup">About</a>
-                <a href="#" class="open-popup">Help</a>
-                <a href="#" class="open-popup">Add Expense</a>
+                <a href="#" class="link">About</a>
+                <a href="#" class="link">Help?</a>
+                <a href="#" data-popover=".popover-links" class="open-popover">Currency: £</a>
+                <a href="#" class="link">Add Expense</a>
             </div>
-          </div>
+        </div>
       </div>
     </div>
   </body>

@@ -21,6 +21,7 @@
                   '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
                   '<link rel="stylesheet" href="css/my-app.material.css">'
               );
+              document.getElementById("bottom-toolbar").style.color = "ffffff";
           }
           else {
               Dom7('head').append(
@@ -32,7 +33,7 @@
       })();
     </script>
     <script src="js/my-app.js"></script>
-  <body>
+  <body class="theme-green">
     <div class="statusbar-overlay"></div>
     <div class="views">
       <!-- 
@@ -100,7 +101,7 @@
         </div>
         
         <!-- Popover for currency choice -->
-        <div class="popover popover-links">
+        <div class="popover popover-currency">
             <div class="popover-angle"></div>
             <div class="popover-inner">
                 <div class="list-block">
@@ -113,20 +114,62 @@
                 </div>
             </div>
         </div>
+          
+        <!-- Popover for help screen -->
+        <div class="popover popover-help">
+            <div class="popover-angle"></div>
+            <div class="popover-inner">
+                <div class="content-block">
+                    <div class="content-block-title">Help</div>
+                    <p>This quick and simple help screen will show you how to use the app.</p>
+                    <div class="content-block-title">Add expense</div>
+                    <p>Press the 'Add Expense' button and enter the name of the expense by pressing the type field and entering the expense name, then do the same for the value of the expense.</p>
+                    <div class="content-block-title">Expenses List</div>
+                    <p>By swiping left on the expenses list you can either delete the expense to remove it from the calculation or you can modify it.</p>
+                    <div class="content-block-title">Starting Balance</div>
+                    <p>Press the text field and enter the value of money you wish to work out with.</p>
+                    <div class="content-block-title">Remaining Balance</div>
+                    <p>This shows the remaining money after expences are accounted for.</p>
+                </div>
+            </div>
+        </div>
+          
+        <!-- Popup for Expense form -->
+        <div class="popup popup-addexpense">
+            <div class="content-block">
+                <div class="content-block-title">Expense Name</div>
+                <div class="content-block-title">Expense Cost</div>
+            </div>
+        </div>
         
+        <!-- Popup for About page -->
+        <div class="popup popup-about">
+            <div class="content-block">
+                <img src="img/logo.png" style="padding-left: 20%; width: 60%; height: 60%">
+                <div style="text-align: center" class="column">
+                    <h1>Moneger</h1>
+                    <h3>A simple money management application</h3>
+                    <p>By Reece Small</p>
+                    <p>v0.0.1</p>
+                </div>
+            </div>
+        </div>
         <style>
-          .popover {
-            width: 100px;
+            .popover-help {
+                width: auto;
+            }
+            .popover-currency {
+                width: auto;
             }
         </style>
-    
+        
         <!-- Toolbar settings -->
-        <div class="toolbar">
+        <div id="bottom-toolbar" class="toolbar">
             <div class="toolbar-inner">
-                <a href="#" class="link">About</a>
-                <a href="#" class="link">Help?</a>
-                <a href="#" data-popover=".popover-links" class="open-popover">Currency: £</a>
-                <a href="#" class="link">Add Expense</a>
+                <a href="#" data-popup=".popup-about" class="open-popup">About</a>
+                <a href="#" data-popover=".popover-help" class="open-popover">Help?</a>
+                <a href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
+                <a href="#" data-popup=".popup-addexpense" class="open-popup">Add Expense</a>
             </div>
         </div>
       </div>
