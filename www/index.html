@@ -25,7 +25,6 @@
               document.getElementById("bthelp").style.color = "ffffff";
               document.getElementById("btcurrency").style.color = "ffffff";
               document.getElementById("btae").style.color = "ffffff";
-
           }
           else {
               Dom7('head').append(
@@ -105,7 +104,7 @@
         </div>      
         <!-- Toolbar settings -->
         <div id="bottom-toolbar" class="toolbar">
-            <div class="toolbar-inner">
+            <div style="padding-left: 5%; padding-right: 5%" class="toolbar-inner">
                 <a id="btAbout" href="#" data-popup=".popup-about" class="open-popup">About</a>
                 <a id="bthelp" href="#" data-popover=".popover-help" class="open-popover">Help?</a>
                 <a id="btcurrency" href="#" data-popover=".popover-currency" class="open-popover">Currency: £</a>
@@ -144,22 +143,31 @@
                     <p>Press the text field and enter the value of money you wish to work out with.</p>
                     <div class="content-block-title">Remaining Balance</div>
                     <p>This shows the remaining money after expences are accounted for.</p>
+                    <a href="#" data-popup=".popover-help" class="close-popover">Close Help</a>
                 </div>
             </div>
         </div>
           
         <!-- Popup for Expense form -->
         <div class="popover popover-addexpense">
-            <div class="content-block">
-                <div class="content-block-title">Expense Name</div>
-                <div class="item-input">
-                  <input type="text" placeholder="Enter Expense Name">
-                </div>  
-                <div class="content-block-title">Expense Cost</div>
-                <div class="item-input">
-                  <input type="number" pattern="\d*" placeholder="Enter Expense Cost">
-                </div> 
+          <div class="content-block">
+            <div class="content-block-title">Expense Name</div>
+            <div class="item-input">
+              <input type="text" placeholder="Enter Expense Name">
+            </div>  
+            <div class="content-block-title">Expense Cost</div>
+            <div class="item-input">
+              <input type="number" pattern="\d*" placeholder="Enter Expense Cost">
             </div>
+            <div class="row">
+              <div class="col-50">
+                <a href="#" class="close-popover">Cancel</a>
+              </div>
+              <div class="col-50">
+                <a href="#" class="button button-big button-green">Add</a>
+              </div>
+            </div>     
+          </div>
         </div>
         
         <!-- Popup for About page -->
@@ -168,14 +176,20 @@
                 <img src="img/logo.png" style="padding-left: 20%; width: 60%; height: 60%">
                 <div style="text-align: center" class="column">
                     <h1>Moneger</h1>
-                    <h3>A simple money management application</h3>
+                    <h3>The simple money control app.</h3>
                     <p>By Reece Small</p>
                     <p>v0.0.1</p>
-                    <p class="buttons-row">
-                      <a href="#" class="button color-red">Visit YouTube</a>
-                      <a href="#" class="button color-indigo">Follow me on Instagram @ItsReeceSmall</a>
-                      <a href="#" class="button color-cyan">Follow me on Twitter @ItsReeceSmall</a>
-                      <a href="#" data-popup=".popup-about" class="button color-green">Return to App</a>
+                    <p class="buttons-row theme-red">
+                      <a href="http://youtube.com/ItsReeceSmall" class="button">Visit My YouTube Channel</a>
+                    </p>
+                    <p class="buttons-row theme-pink">
+                      <a href="http://instagram.com/itsreecesmall" class="button">Follow me on Instagram @ItsReeceSmall</a>
+                    </p>
+                    <p class="buttons-row theme-cyan">
+                      <a href="http://twitter.com/ItsReeceSmall" class="button">Follow me on Twitter @ItsReeceSmall</a>
+                    </p>
+                    <p class="buttons-row theme-indigo">
+                      <a href="#" data-popup=".popup-about" class="close-popup">Return to App</a>
                     </p>
                 </div>
             </div>
