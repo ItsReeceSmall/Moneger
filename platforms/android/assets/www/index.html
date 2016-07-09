@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>Monager</title>
+    <!-- We will include related CSS styles using JavaScript -->
+  </head>
+    <script src="js/framework7.min.js"></script>
+    <!--
+    We need the following script to include styles depending on device's OS
+    It is important to keep it as inline script or in separate JS file with this code only!
+    -->
+    <script>
+      (function () {
+        if (Framework7.prototype.device.android) {
+              Dom7('head').append(
+                  '<link rel="stylesheet" href="css/framework7.material.min.css">' +
+                  '<link rel="stylesheet" href="css/framework7.material.colors.min.css">' +
+                  '<link rel="stylesheet" href="css/my-app.material.css">'
+              );
+          }
+          else {
+              Dom7('head').append(
+                  '<link rel="stylesheet" href="css/framework7.ios.min.css">' +
+                  '<link rel="stylesheet" href="css/framework7.ios.colors.min.css">' +
+                  '<link rel="stylesheet" href="css/my-app.ios.css">'
+              );
+          }
+      })();
+    </script>
+    <script src="js/my-app.js"></script>
+  <body>
+    <div class="statusbar-overlay"></div>
+    <div class="views">
+      <!-- 
+      We use Through-type Navbar layout for dynamic navbar.
+      So we keep Navbar as the child of View, and have "navbar-through" class on View 
+      -->
+      <div class="view view-main navbar-through">
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="center sliding">Moneger</div>
+          </div>
+        </div>
+          
+        <div class="pages">
+          <div data-page="index" class="page">
+            <div class="page-content">
+                <div class="content-block-title"></div>
+                <div class="content-block">
+                    <div class="row">
+                        <div class="col-50">
+                            <div class="content-block-title">Starting Balance</div>
+                        </div>
+                        <div class="col-50">
+                            <div class="content-block-title">Remaining Balance</div>
+                            
+                        </div>
+                    </div>                  
+                </div>
+                <div class="content-block-title">Expenses list</div>
+                <div class="list-block">
+                    <ul>
+                        <li class="swipeout">
+                            <div class="swipeout-content item-content">
+                                <div class="item-media">Expense</div>
+                                <div class="item-inner">£450</div>
+                            </div>
+                            <div class="swipeout-actions-right">
+                                <!-- Add this button and item will be deleted automatically -->
+                                <a href="#" class="swipeout-delete">Delete</a>
+                            </div>
+                        </li>  
+                    </ul>
+                </div>
+                <div class="popup popup-about">
+                    <div class="content-block">
+                        <p>About</p>
+                        <p><a href="#" class="close-popup">Close popup</a></p>
+                        <p>Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...Lorem ipsum dolor ...</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+        <div class="toolbar">
+            <div class="toolbar-inner">
+                <a href="#" data-popup=".popup-about" class="open-popup">About</a>
+                <a href="#" class="open-popup">Help</a>
+                <a href="#" class="open-popup">Add Expense</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html> 
