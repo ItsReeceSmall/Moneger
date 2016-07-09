@@ -24,6 +24,7 @@
         <splash src="res/screen/android/ss_xxhdpi.png" density="port-xxhdpi"/>
         <splash src="res/screen/android/ss_xxxhdpi.png" density="port-xxxhdpi"/>
         <preference name="FadeSplashScreen" value="false"/>
+        <preference name="SplashMaintainAspectRatio" value="true" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

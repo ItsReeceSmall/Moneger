@@ -9,6 +9,10 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <allow-intent href="market:*" />
     <icon src="www/img/logo.png" />
     <splash density="port-hdpi" src="res/screen/android/ss_hdpi.png" />
@@ -16,6 +20,7 @@
     <splash density="port-xxhdpi" src="res/screen/android/ss_xxhdpi.png" />
     <splash density="port-xxxhdpi" src="res/screen/android/ss_xxxhdpi.png" />
     <preference name="FadeSplashScreen" value="false" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
     <name>Moneger</name>
     <description>
         A simple to use money management app which displays remaining monthly funds after specifying spendings and remaining earnings.
