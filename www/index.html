@@ -25,6 +25,10 @@
               document.getElementById("bthelp").style.color = "ffffff";
               document.getElementById("btcurrency").style.color = "ffffff";
               document.getElementById("btae").style.color = "ffffff";
+			  document.getElementById("btAbout").style.color = ffffff;
+              document.getElementById("bthelp").style.color = ffffff;
+              document.getElementById("btcurrency").style.color = ffffff;
+              document.getElementById("btae").style.color = ffffff;
           }
           else {
               Dom7('head').append(
@@ -94,6 +98,7 @@
                             </div>
                             <div class="swipeout-actions-right">
                                 <!-- Add this button and item will be deleted automatically -->
+								<a href="#" class="action1">Edit</a>
                                 <a href="#" class="swipeout-delete">Delete</a>
                             </div>
                         </li>  
@@ -133,17 +138,24 @@
             <div class="popover-angle"></div>
             <div class="popover-inner">
                 <div class="content-block">
-                    <div class="content-block-title">Help</div>
-                    <p>This quick and simple help screen will show you how to use the app.</p>
-                    <div class="content-block-title">Add expense</div>
-                    <p>Press the 'Add Expense' button and enter the name of the expense by pressing the type field and entering the expense name, then do the same for the value of the expense.</p>
-                    <div class="content-block-title">Expenses List</div>
-                    <p>By swiping left on the expenses list you can either delete the expense to remove it from the calculation or you can modify it.</p>
-                    <div class="content-block-title">Starting Balance</div>
-                    <p>Press the text field and enter the value of money you wish to work out with.</p>
-                    <div class="content-block-title">Remaining Balance</div>
-                    <p>This shows the remaining money after expences are accounted for.</p>
-                    <a href="#" data-popup=".popover-help" class="close-popover">Close Help</a>
+					<div class="card">
+  						<div class="card-header">Help</div>
+  						<div class="card-content">
+    						<div class="card-content-inner">
+								<h2>Add expense</h2>
+                    			<p>Press the 'Add Expense' button and enter the name of the expense by pressing the type field and entering the expense name, then do the same for the value of the expense.</p>
+                    			<h2>Expenses List</h2>
+                    			<p>By swiping left on the expenses list you can either delete the expense to remove it from the calculation or you can modify it.</p>
+                    			<h2>Starting Balance</h2>
+                    			<p>Press the text field and enter the value of money you wish to work out with.</p>
+                    			<h2>Remaining Balance</h2>
+                    			<p>This shows the remaining money after expences are accounted for.</p>
+							</div>
+  						</div>
+  						<div class="card-footer">
+							<a href="#" data-popup=".popover-help" class="close-popover">Close Help</a>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
@@ -161,7 +173,7 @@
             </div>
             <div class="row">
               <div class="col-50">
-                <a href="#" class="close-popover">Cancel</a>
+                <a href="#" class="button button-big button-red close-popover">Cancel</a>
               </div>
               <div class="col-50">
                 <a href="#" class="button button-big button-green">Add</a>
@@ -179,18 +191,10 @@
                     <h3>The simple money control app.</h3>
                     <p>By Reece Small</p>
                     <p>v0.0.1</p>
-                    <p class="buttons-row theme-red">
-                      <a href="http://youtube.com/ItsReeceSmall" class="button">Visit My YouTube Channel</a>
-                    </p>
-                    <p class="buttons-row theme-pink">
-                      <a href="http://instagram.com/itsreecesmall" class="button">Follow me on Instagram @ItsReeceSmall</a>
-                    </p>
-                    <p class="buttons-row theme-cyan">
-                      <a href="http://twitter.com/ItsReeceSmall" class="button">Follow me on Twitter @ItsReeceSmall</a>
-                    </p>
-                    <p class="buttons-row theme-indigo">
-                      <a href="#" data-popup=".popup-about" class="close-popup">Return to App</a>
-                    </p>
+                    <p><a style="background: red" href="http://youtube.com/ItsReeceSmall" class="button button-fill color-red external">Visit My YouTube Channel</a></p>
+                    <p><a style="background: #607d8b" href="http://instagram.com/itsreecesmall" class="button button-fill color-pink external">Follow me on Instagram @ItsReeceSmall</a></p>
+                    <p><a style="background: #03a9f4" href="http://twitter.com/ItsReeceSmall" class="button button-fill color-lightblue external">Follow me on Twitter @ItsReeceSmall</a></p>
+                    <p><a style="background: gray" href="#" data-popup=".popup-about" class="button button-fill color-gray close-popup">Return to App</a></p>
                 </div>
             </div>
         </div>
